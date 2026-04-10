@@ -1,0 +1,171 @@
+/* app/ui/styles.qss */
+/* ============================================================
+ VIDYA AI -- Qt Stylesheet
+ Applied to the entire desktop application.
+ QSS is similar to CSS -- selectors target Qt widget classes.
+ ============================================================ */
+
+/* Global: apply to every widget */
+QWidget {
+    font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+    font-size: 13px;
+    color: #1C2833;
+    background-color: #F4F6F7;
+}
+
+/* Main window background */
+QMainWindow {
+    background-color: #EAF0FB;
+}
+
+/* Tab widget navigation bar */
+QTabWidget::pane {
+    border: 1px solid #AED6F1;
+    background: #FFFFFF;
+    border-radius: 6px;
+}
+
+QTabBar::tab {
+    background: #D6EAF8;
+    border: 1px solid #AED6F1;
+    padding: 8px 20px;
+    margin-right: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #1B3A5C;
+    font-weight: bold;
+}
+
+QTabBar::tab:selected {
+    background: #2471A3;
+    color: white;
+    border-bottom: none;
+}
+
+QTabBar::tab:hover:!selected {
+    background: #AED6F1;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #2471A3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #1A5276; /* Darker on hover */
+}
+
+QPushButton:pressed {
+    background-color: #154360;
+}
+
+QPushButton:disabled {
+    background-color: #AEB6BF;
+    color: #717D7E;
+}
+
+/* Text input fields */
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: #FFFFFF;
+    border: 2px solid #AED6F1;
+    border-radius: 5px;
+    padding: 6px 10px;
+    selection-background-color: #2471A3;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border: 2px solid #2471A3;
+}
+
+/* Dropdowns */
+QComboBox {
+    background: white;
+    border: 2px solid #AED6F1;
+    border-radius: 5px;
+    padding: 5px 10px;
+    min-width: 100px;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+/* Group boxes (used for 'Admin Authentication' etc.) */
+QGroupBox {
+    font-weight: bold;
+    color: #1B3A5C;
+    border: 1.5px solid #AED6F1;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding-top: 12px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    padding: 0 6px;
+    background: #EAF0FB;
+}
+
+/* Table widget (documents list in admin panel) */
+QTableWidget {
+    gridline-color: #D5D8DC;
+    background: white;
+    alternate-background-color: #EBF5FB;
+}
+
+QTableWidget::item:selected {
+    background: #2471A3;
+    color: white;
+}
+
+QHeaderView::section {
+    background: #1B3A5C;
+    color: white;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+}
+
+/* Progress bar */
+QProgressBar {
+    border: 1px solid #AED6F1;
+    border-radius: 4px;
+    background: #EBF5FB;
+    text-align: center;
+}
+
+QProgressBar::chunk {
+    background-color: #2471A3;
+    border-radius: 4px;
+}
+
+/* Status bar at bottom of window */
+QStatusBar {
+    background: #1B3A5C;
+    color: #AED6F1;
+    font-size: 11px;
+}
+
+/* Scrollbars -- thin and subtle */
+QScrollBar:vertical {
+    width: 8px;
+    background: #F4F6F7;
+}
+
+QScrollBar::handle:vertical {
+    background: #AED6F1;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #2471A3;
+}

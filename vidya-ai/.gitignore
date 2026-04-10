@@ -1,0 +1,67 @@
+# ============================================================
+# VIDYA AI — Git Ignore Rules
+# These files/folders are NOT pushed to GitHub:
+# - AI models (too large, not code)
+# - Knowledge base content (user data)
+# - Virtual environment (rebuilt from requirements.txt)
+# - Sensitive config (.env)
+# ============================================================
+
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# === VIRTUAL ENVIRONMENT ===
+venv/
+env/
+.venv/
+ENV/
+
+# === AI MODELS (CRITICAL — these are gigabytes!) ===
+models/
+*.gguf
+*.bin
+*.pt
+*.safetensors
+*.onnx
+
+# === KNOWLEDGE BASE (user content — not source code) ===
+knowledge_base/
+
+# === DATABASE (runtime data) ===
+database/*.db
+database/*.db-shm
+database/*.db-wal
+
+# === EXPORTS (generated files) ===
+exports/
+
+# === LOGS ===
+logs/
+*.log
+
+# === ENVIRONMENT / SECRETS ===
+.env
+*.env
+
+# === OS FILES ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === IDE FILES ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === HuggingFace cache ===
+.cache/
+huggingface/
