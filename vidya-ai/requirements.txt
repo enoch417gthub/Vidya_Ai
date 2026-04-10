@@ -1,0 +1,50 @@
+# ============================================================
+# VIDYA AI — requirements.txt
+# Install with: pip install -r requirements.txt
+# ============================================================
+# --- WEB FRAMEWORK (local REST API backend) ---
+fastapi==0.111.0 # Modern async Python web framework
+uvicorn[standard]==0.29.0 # ASGI server to run FastAPI
+python-multipart==0.0.9 # Required for file upload endpoints
+# --- DATABASE (local SQLite ORM) ---
+sqlalchemy==2.0.30 # Python ORM for SQLite database
+alembic==1.13.1 # Database migration tool
+# --- LLM INFERENCE (local offline AI) ---
+llama-cpp-python==0.2.77 # Python bindings for llama.cpp (runs GGUF models)
+# Note: For GPU support, install with: CMAKE_ARGS='-DLLAMA_CUDA=on' pip install llamacpp-python
+# --- EMBEDDINGS (convert text to vectors) ---
+sentence-transformers==3.0.0 # Loads + runs embedding models locally
+torch==2.3.0 # PyTorch (CPU version) — required by sentence-transformers
+# --- VECTOR DATABASE (semantic search) ---
+faiss-cpu==1.8.0 # Facebook AI Similarity Search — stores embeddings
+# --- KEYWORD SEARCH (BM25 sparse retrieval) ---
+rank-bm25==0.2.2 # BM25 algorithm for keyword-based search
+# --- DOCUMENT PARSING ---
+pymupdf==1.24.3 # PyMuPDF — best PDF text + image extractor
+python-pptx==0.6.23 # Parse PowerPoint (.pptx) files
+python-docx==1.1.2 # Parse and generate Word (.docx) files
+pytesseract==0.3.13 # Python wrapper for Tesseract OCR engine
+Pillow==10.3.0 # Image processing (required by pytesseract)
+# --- TEXT PROCESSING / NLP ---
+langchain==0.2.3 # Text chunking utilities (RecursiveCharacterTextSplitter)
+langchain-community==0.2.3 # Community integrations for langchain
+tiktoken==0.7.0 # Fast tokenizer — for accurate chunk size counting
+# --- DESKTOP UI ---
+PyQt6==6.7.0 # Qt6 Python bindings — cross-platform desktop GUI
+PyQt6-Qt6==6.7.0 # Qt6 runtime libraries
+PyQt6-sip==13.6.0 # SIP bindings layer for PyQt6
+# --- DOCUMENT GENERATION ---
+reportlab==4.2.0 # PDF generation from Python
+# python-docx already listed above handles Word generation
+# --- SPEECH (offline voice interaction) ---
+faster-whisper==1.0.2 # Efficient Whisper.cpp Python wrapper for speech-to-text
+pyttsx3==2.90 # Offline text-to-speech synthesis
+# --- UTILITIES ---
+python-dotenv==1.0.1 # Load .env config files
+pydantic==2.7.1 # Data validation and settings management
+pydantic-settings==2.3.1 # Settings from environment variables
+httpx==0.27.0 # Async HTTP client (for internal API calls from UI)
+tqdm==4.66.4 # Progress bars for indexing
+loguru==0.7.2 # Better logging library
+numpy==1.26.4 # Numerical operations (required by FAISS)
+aiofiles==23.2.1 # Async file I/O for FastAPI uploads
